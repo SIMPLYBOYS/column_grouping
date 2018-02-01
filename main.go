@@ -7,8 +7,8 @@ import (
 	"log"
 	"net/http"
 
-	"column_grouping/controllers"
-	"column_grouping/models"
+	"github.com/SIMPLYBOYS/column_grouping/controllers"
+	"github.com/SIMPLYBOYS/column_grouping/models"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/julienschmidt/httprouter"
 )

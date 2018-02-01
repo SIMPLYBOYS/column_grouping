@@ -1,7 +1,7 @@
 package utils
 
 import "database/sql"
-import "../../models"
+import "github.com/SIMPLYBOYS/column_grouping/models"
 
 type MySqlClientUtil struct {
 }

@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"../models"
-	"../utils/mysql"
+	"github.com/SIMPLYBOYS/column_grouping/models"
+	"github.com/SIMPLYBOYS/column_grouping/utils/mysql"
 	"github.com/julienschmidt/httprouter"
 )
 
