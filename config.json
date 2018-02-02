@@ -1,0 +1,11 @@
+{
+    "mysql": [
+     {
+        "database": "bpo",
+        "host": "10.1.100.139",
+        "port": "3306",
+        "user": "HR",
+        "password": "1234567"
+     }
+    ]
+}

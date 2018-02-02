@@ -9,6 +9,7 @@ import (
 
 	"github.com/SIMPLYBOYS/column_grouping/controllers"
 	"github.com/SIMPLYBOYS/column_grouping/models"
+	"github.com/SIMPLYBOYS/column_grouping/utils"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/julienschmidt/httprouter"
 )
@@ -20,11 +21,12 @@ var gc *controllers.GroupController
 
 func init() {
 	log.Println("=== init ===")
+	utils.InitialMysql()
 }
 
 func main() {
 	gc := controllers.NewGroupController()
-	fmt.Println("=== main ===")
+	fmt.Println("\n\n=== main ===\n\n")
 	mux := httprouter.New()
 	mux.GET("/", helloworld)
 	mux.GET("/getGrp", gc.GetGrp)

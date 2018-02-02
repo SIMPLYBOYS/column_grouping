@@ -67,11 +67,11 @@ func (gc GroupController) BulkInsertFieldGrp(w http.ResponseWriter, req *http.Re
 	// -------------------------------
 
 	for _, item := range groups {
-		stmt, err := db.Prepare("INSERT column_group SET grp=?, CorrespondInterface=?, Field_Name=?, grp_eng=?")
+		stmt, err := db.Prepare("INSERT column_group SET grp=?, CorrespondInterface=?, Field_Name=?, grp_eng=?, US_ID=?, date_time=?")
 		check(err)
 		defer stmt.Close()
 
-		r, err := stmt.Exec(item.Grp, item.Correspond, item.FieldName, item.GrpEng)
+		r, err := stmt.Exec(item.Grp, item.Correspond, item.FieldName, item.GrpEng, item.UserId, item.Date)
 		check(err)
 
 		n, err := r.RowsAffected()

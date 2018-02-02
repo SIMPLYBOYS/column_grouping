@@ -15,4 +15,18 @@ type FiledGroup struct {
 	Correspond string `json:"correspond"`
 	FieldName  string `json:"fieldname"`
 	GrpEng     string `json:"grpeng"`
+	UserId     string `json:"userId"`
+	Date       string `json:"date"`
+}
+
+type MysqlConfig struct {
+	Database string `json:"database"`
+	Host     string `json:"host"`
+	Port     string `json:"port"`
+	User     string `json:"user"`
+	Password string `json:"password"`
+}
+
+type Configs struct {
+	Configs []MysqlConfig `json:"mysql"`
 }
