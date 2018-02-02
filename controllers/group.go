@@ -106,15 +106,17 @@ func (gc GroupController) InsertFieldGrp(w http.ResponseWriter, req *http.Reques
 	correspond := req.FormValue("correspond")
 	field := req.FormValue("field")
 	grp_eng := req.FormValue("grpEng")
+	userId := req.FormValue("userId")
+	date := req.FormValue("date")
 
 	// rows, err := db.Query("SELECT * FROM column_group WHERE CorrespondInterface =" + correspond + " AND Field_Name = " + field)
 	// fmt.Println(rows)
 
-	stmt, err := db.Prepare("INSERT column_group SET grp=?, CorrespondInterface=?, Field_Name=?, grp_eng=?")
+	stmt, err := db.Prepare("INSERT column_group SET grp=?, CorrespondInterface=?, Field_Name=?, grp_eng=?, US_ID=?, date_time=?")
 	check(err)
 	defer stmt.Close()
 
-	r, err := stmt.Exec(grp, correspond, field, grp_eng)
+	r, err := stmt.Exec(grp, correspond, field, grp_eng, userId, date)
 	check(err)
 
 	n, err := r.RowsAffected()
