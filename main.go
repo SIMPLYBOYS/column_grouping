@@ -9,7 +9,7 @@ import (
 
 	"github.com/SIMPLYBOYS/column_grouping/controllers"
 	"github.com/SIMPLYBOYS/column_grouping/models"
-	"github.com/SIMPLYBOYS/column_grouping/utils"
+	"github.com/SIMPLYBOYS/column_grouping/utils/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/julienschmidt/httprouter"
 )
